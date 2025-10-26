@@ -1,0 +1,6 @@
+streamlit==1.24.0
+openai==0.27.8
+pdfplumber==0.7.4
+python-docx==0.8.11
+docx2txt==0.8
+plotly==5.13.0
