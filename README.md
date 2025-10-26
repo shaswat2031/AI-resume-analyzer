@@ -22,6 +22,14 @@ A powerful AI-powered resume analysis and tailoring tool built with Streamlit. T
 - **Multiple Download Formats**: Download tailored resumes in TXT and DOCX formats
 - **Cover Note Generation**: Auto-generate personalized cover notes highlighting key achievements
 
+### ⚖️ Resume Comparison (NEW!)
+- **Side-by-Side Analysis**: Compare two resumes directly with AI-powered insights
+- **Winner Determination**: Get clear recommendations on which resume performs better
+- **Targeted Comparison**: Add job descriptions for role-specific comparisons
+- **Strengths & Weaknesses**: Detailed breakdown of each resume's advantages
+- **Improvement Recommendations**: Specific suggestions for enhancing both resumes
+- **Visual Scoring**: Interactive charts showing comparative performance
+
 ### 🤖 Multiple AI Models
 Choose from different AI models for analysis:
 - **GPT-3.5**: Fast & efficient analysis
@@ -83,6 +91,7 @@ The application will open in your default web browser at `http://localhost:8501`
 
 ## 📋 Usage
 
+### 📊 Resume Analysis & Tailoring
 1. **Upload Your Resume**: Upload your resume in PDF, DOCX, or TXT format
 2. **Paste Job Description**: Copy and paste the complete job description you're targeting
 3. **Choose AI Model**: Select your preferred AI model from the sidebar
@@ -90,11 +99,20 @@ The application will open in your default web browser at `http://localhost:8501`
 5. **Tailor**: Click "✍️ Generate Tailored Resume" to create an optimized version
 6. **Download**: Save your tailored resume and cover note
 
+### ⚖️ Resume Comparison
+1. **Navigate**: Select "Resume Comparison" from the sidebar
+2. **Upload Two Resumes**: Upload both resumes you want to compare (PDF, DOCX, or TXT)
+3. **Add Job Description** (Optional): Paste a job description for targeted comparison
+4. **Compare**: Click "⚖️ Compare Resumes" to get detailed analysis
+5. **Review Results**: See winner determination, strengths, weaknesses, and recommendations
+6. **View Previews**: Check resume content and scores side-by-side
+
 ## 📁 Project Structure
 
 ```
 AI-resume-analyzer/
-├── app.py              # Main Streamlit application
+├── app.py              # Main Streamlit application (multi-page)
+├── app_backup.py       # Backup of original single-page app
 ├── requirements.txt    # Python dependencies
 ├── .env               # Environment variables (API keys)
 ├── .gitignore         # Git ignore rules
@@ -127,12 +145,13 @@ The application uses OpenAI-compatible APIs with the following default settings:
 | python-dotenv | 1.0.0 | Environment variable management |
 | pillow | 10.4.0 | Image processing |
 
-## 💡 Tips for Best Results
+### 💡 Tips for Best Results
 
 ### Resume Upload
 - Ensure your resume is well-formatted and ATS-friendly
 - Use clear section headers (Experience, Education, Skills, etc.)
 - Include quantified achievements where possible
+- **Large Resume Support**: The app automatically handles large resumes by processing them in smaller chunks
 
 ### Job Description
 - Paste the complete job description including:
