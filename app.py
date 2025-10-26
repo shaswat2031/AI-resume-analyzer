@@ -7,6 +7,10 @@ from typing import Tuple, Dict, Any
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # File parsing libs
 try:
@@ -28,7 +32,7 @@ except Exception:
 # --------------------------
 # CONFIG & CONSTANTS
 # --------------------------
-API_KEY = "sk-u5TAUn13mqbkn185KjWymCm99TC9mDFhWnomh5G1E3847Ngj"  # Fixed API key
+API_KEY = os.getenv("OPENAI_API_KEY")  # Load from environment variable
 API_BASE = "https://api.chatanywhere.tech"
 DEFAULT_MODEL = "gpt-3.5-turbo"
 
